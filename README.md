@@ -4,7 +4,7 @@ Um projeto simples e divertido de bateria virtual feito com HTML, CSS e JavaScri
 
 ## 👀 Preview
 
-![Preview do Drum Kit](../images/preview.png)
+![Preview do Drum Kit](preview.png)
 
 
 
