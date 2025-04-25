@@ -8,8 +8,10 @@ for (let i = 0; i < buttons.length; i++) {
   document.querySelectorAll('button')[i].addEventListener('click', function () {
 
     let buttonInnerHtml = this.innerHTML
-    
+
     makeSounds(buttonInnerHtml)
+
+    buttonAnimation(buttonInnerHtml)
 
   })
 
@@ -17,6 +19,8 @@ for (let i = 0; i < buttons.length; i++) {
 
 document.addEventListener('keydown', function (event) {
   makeSounds(event.key)
+  buttonAnimation(event.key)
+
 })
 
 
@@ -57,3 +61,18 @@ function makeSounds(key) {
   }
 }
 
+
+function buttonAnimation(currentKey) {
+
+  let activeButton = document.querySelector("." + currentKey)
+  activeButton.classList.add("pressed")
+
+  let myTimeOut = setTimeout(endAnimation, 200)
+
+  function endAnimation() {
+    
+  activeButton.classList.remove("pressed");
+
+  }
+
+}
